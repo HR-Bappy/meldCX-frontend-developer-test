@@ -1,0 +1,238 @@
+/*-----------------
+	Author: HR-Bappy
+-----------------------*/
+
+
+/*============================
+ [Table of CSS]
+1. General
+2. Helper Class
+3. Login page css
+4. Device page css
+
+
+
+/*-----------------
+	1. Common
+-----------------------*/
+
+:root {
+    --primary: #0b4376;
+    --hover: yellow;
+    --white: #eee;
+	--black:#333333;
+	--gray : #666666;
+  }
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+html {height: 100%;}
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 0.875rem;
+	color: #666;
+	background-color: #fafafa;
+	overflow-x: hidden;
+	height: 100%;
+	margin: 0 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {margin-top: 0;}
+h1,
+.h1 {font-size: 2.25rem;}
+h2,
+.h2 {font-size: 1.875rem;}
+h3,
+.h3 {font-size: 1.5rem;}
+h4,
+.h4 {font-size: 1.125rem;}
+h5,
+.h5 {font-size: 0.875rem;}
+h6,
+.h6 {font-size: 0.75rem;}
+
+/*-----------------
+	2. Helper Class
+-----------------------*/
+
+.m-r-5 {margin-right: 5px !important;}
+.m-r-10 {margin-right: 10px !important;}
+.m-l-5 {margin-left: 5px !important;}
+.m-t-0 {margin-top: 0 !important;}
+.m-t-10 {margin-top: 10px !important;}
+.m-t-20 {margin-top: 20px !important;}
+.m-t-30 {margin-top: 30px !important;}
+.m-t-50 {margin-top: 50px !important;}
+.m-b-10 {margin-bottom: 10px !important;}
+.m-b-20 {margin-bottom: 20px !important;}
+.m-b-30 {margin-bottom: 30px !important;}
+.pt-50{ padding-top: 50px; }
+.pb-50{padding-bottom: 50px;}
+.ptb-50{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.pt-100{padding-top: 100px;}
+.pb-100{padding-bottom: 100px;}
+.ptb-100{padding: 100px 0;}
+
+/*-----------------
+	3. Login page css
+-----------------------*/
+
+#sign-in-up .content{
+	width: 100vw;
+	height: 100vh;
+	background: #263238;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sign-in-up .content .form{
+	width: 320px;
+	background: #fff;
+	padding: 50px 15px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px black;
+}
+#sign-in-up .content .form form{
+	width: 100%;
+	text-align: center;
+}
+.content .form h1{
+	text-align: center;
+	font-weight: 200;
+}
+.icon svg{
+	fill: #263238;
+}
+.signin-btn{
+	margin-top: 20px;
+	background: #0277BD;
+	color: #fff;
+	padding: 10px 15px;
+	border: 2px solid transparent; 
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 3px;
+	transition: .3s ease-in-out;
+}
+.signin-btn:hover{
+	background: #fff;
+	color: #0277BD;
+	border: 2px solid #0277BD; 
+}
+
+.input-field{
+	padding: 5px 0;
+	position: relative;
+}
+.input-field input{
+	border: none;
+	padding: 12px 20px;
+	padding-left: 40px;
+	width: calc(100% - 60px);
+	background: #ECEFF1;
+	outline: none;
+	border: 1px solid transparent;
+}
+.input-field input:focus{
+	border: 1px solid rgba(102, 102, 102, 0.219);
+}
+.input-field svg{
+	width: 20px;
+    fill: #263238;
+    position: absolute;
+    top: 14px;
+    left: 8px;
+}
+
+/* device page csss start  */
+#device-page .content{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background: #FF7043;
+	top: 0;
+	left: 0;
+}
+#device-page .content .body{
+	width: 100%;
+	height: calc(100% - 60px);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#device-page .content .device-count{
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: rotate 10s linear infinite; 
+}
+
+#device-page .content .device-count:before{ 
+	content:''; 
+	animation:rotate 4s linear reverse infinite; 
+}
+@keyframes rotate { 
+	100% { transform:rotate(360deg); } 
+}
+
+#device-page .content .body p{
+	text-align: center;
+	margin: 0 !important;
+}
+
+#device-page .content .body p:first-child{
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 100;
+}
+
+.device-count .circle{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background: #fff;
+}
+.online-device{
+	position: fixed;
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	background: #D76845;
+}
+.footer .btn-group button{
+	border: none;
+	padding: 7px 12px;
+	margin: 0 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.footer .notify-btn{
+	background: #fff;
+	color: #000;
+}
+.footer .logout-btn{
+	background: #37474F;
+	color: #FFF;
+}
+
+/* device page csss eng  */
+
