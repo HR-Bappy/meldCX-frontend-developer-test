@@ -22,10 +22,9 @@ export default function Device() {
   async function countDownFun() {
     const result = await Axios.get(`${process.env.REACT_APP_API_URL}/devices`);
     setOnlineDevices(result.data.devices.length);
-    console.log("result.data.devices.length", result.data.devices.length);
     let temp = createPoints(result.data.devices.length);
     setPoints(temp);
-    // setTimeout(countDownFun, 5000);
+    setTimeout(countDownFun, 5000);
   }
 
   // find the [x,y] axis 
@@ -58,7 +57,6 @@ export default function Device() {
 
     onSubmitNotify(values)
       .then((res) => {
-        console.log("rrr",res)
         if (res.status === 200) {
           notification("success", res.message);
         } else if(res.status === 201) {

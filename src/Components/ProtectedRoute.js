@@ -4,7 +4,6 @@ import { getCurrentUser } from "../helpers/Cookies/LocalStorage";
 
 function ProtectedRoute({ component: Component, ...restOfProps }) {
   const isAuthenticated = getCurrentUser();
-  console.log("this", isAuthenticated);
   const auth = isAuthenticated?true:false
   return (
 

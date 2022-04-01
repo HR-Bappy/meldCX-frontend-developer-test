@@ -5,7 +5,6 @@ const position = "top-right"
 const time = 2000
 
 export function notification(status,data){
-    console.log(status,data)
     let msg = null
     switch(status){
         case 'success':

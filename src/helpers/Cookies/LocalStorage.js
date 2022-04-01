@@ -1,5 +1,4 @@
 export function setCookies(key, value) {
-    console.log(key,value)
     localStorage.setItem(key, value)
 }
 export function getCurrentUser() {
