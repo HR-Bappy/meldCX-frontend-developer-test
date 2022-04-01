@@ -11,7 +11,7 @@ let baseURL = process.env.REACT_APP_API_URL
 
 const customInstance = axios.create({
   baseURL: baseURL,
-  headers: { 'Authorization': token }
+  headers: { 'Authorization': `Bearer ${token}` }
 })
 
 export default customInstance

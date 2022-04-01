@@ -52,24 +52,24 @@ export default function Device() {
     let values = {
       name: "Habibur Rahman",
       email: "mdhabiburrb@gmail.com",
-      repoURL: "https://github.com/HR-Bappy/meldCX-frontend-developer-test",
-      message: "hello",
+      repoUrl: "https://github.com/HR-Bappy/meldCX-frontend-developer-test",
+      message: "Hello Celia, I have just compleated the task and waiting for you feedback and further instruction. Thank you",
     };
 
     onSubmitNotify(values)
       .then((res) => {
-        console.log("cccc", res);
+        console.log("rrr",res)
         if (res.status === 200) {
-          notification("success", "Login Successfully. Redirecting... ");
-          setTimeout(() => {
-            window.location.href = "/device";
-          }, 1500);
-        } else {
-          notification("fail", res.message);
+          notification("success", res.message);
+        } else if(res.status === 201) {
+          notification("success", res.data);
+        }
+        else{
+          notification("fail", res.data);
         }
       })
       .catch((err) => {
-        if (err.response.status === 401) notification("fail", err.response.data);
+        notification("fail", err.response.data);
       });
   }
   
